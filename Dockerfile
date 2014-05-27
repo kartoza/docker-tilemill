@@ -31,7 +31,7 @@ RUN chmod o-rwx /root/.ssh
 #-------------Application Specific Stuff ----------------------------------------------------
 
 RUN apt-get install software-properties-common python-software-properties
-RUN add-apt-repository ppa:developmentseed/mapbox; apt-get update; apt-get install -y tilemill
+RUN add-apt-repository ppa:developmentseed/mapbox && apt-get update && apt-get install -y tilemill
 
 ADD tilemill.conf /etc/supervisor/conf.d/tilemill.conf
 
