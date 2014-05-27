@@ -30,9 +30,11 @@ RUN chmod o-rwx /root/.ssh
 
 #-------------Application Specific Stuff ----------------------------------------------------
 
-RUN apt-get install software-properties-common python-software-properties
-RUN add-apt-repository ppa:developmentseed/mapbox && apt-get update && apt-get install -y tilemill
+RUN apt-get install -y software-properties-common python-software-properties && add-apt-repository ppa:developmentseed/mapbox && apt-get update && apt-get install -y tilemill
 
+# This script will be called by supervisor to start tilemill
+ADD run_tilemill.sh /run_tilemill.sh
+# This is the supervisor script that will run the above command
 ADD tilemill.conf /etc/supervisor/conf.d/tilemill.conf
 
 EXPOSE 22
