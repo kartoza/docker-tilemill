@@ -30,7 +30,10 @@ RUN chmod o-rwx /root/.ssh
 
 #-------------Application Specific Stuff ----------------------------------------------------
 
-RUN apt-get install -y software-properties-common python-software-properties && add-apt-repository ppa:developmentseed/mapbox && apt-get update && apt-get install -y tilemill fonts-freefont-ttf
+RUN apt-get install -y software-properties-common python-software-properties && \
+    add-apt-repository ppa:developmentseed/mapbox && \
+    apt-get update && \
+    apt-get install -y tilemill fonts-freefont-ttf fonts-ubuntu-font-family-console ttf-ubuntu-font-family edubuntu-fonts fonts-ubuntu-title
 
 # This script will be called by supervisor to start tilemill
 ADD run_tilemill.sh /run_tilemill.sh
