@@ -6,13 +6,13 @@ A simple docker container that runs tilemill (https://github.com/mapbox/tilemill
 To build the image do:
 
 ```
-docker.io build -t kartoza/tilemill git://github.com/timlinux/docker-tilemill
+docker build -t kartoza/tilemill git://github.com/timlinux/docker-tilemill
 ```
 
 To run a container do:
 
 ```
-docker.io run --name=tilemill -p 1100:22 -p 20008:20008 -p 20009:20009 -d -t kartoza/tilemill
+docker run --name=tilemill -p 1100:22 -p 20008:20008 -p 20009:20009 -d -t kartoza/tilemill
 ```
 
 Perhaps you might also want to link to a docker container running postgres (see 

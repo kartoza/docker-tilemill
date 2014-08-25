@@ -1,1 +1,1 @@
-docker.io build -t kartoza/tilemill .
+docker build -t kartoza/tilemill .

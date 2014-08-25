@@ -1,5 +1,5 @@
 
-docker.io run \
+docker run \
 	--name=tilemill \
 	--link osm-africa-postgis:osm-africa-postgis \
         -v /home/gisdata:/home/gisdata \
