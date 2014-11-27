@@ -1,5 +1,5 @@
-docker-ssh
-==========
+docker-tilemill
+===============
 
 A simple docker container that runs tilemill (https://github.com/mapbox/tilemill).
 
@@ -32,7 +32,7 @@ it should work after a few minutes!
 To log into your container via ssh do:
 
 ```
-ssh root@localhost -p 1000
+ssh root@localhost -p 1100
 ```
 
 Default password will appear in docker logs:
