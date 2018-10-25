@@ -22,7 +22,7 @@ the container and then work on data from your local filesystem.
 To use the container, open your browser at:
 
 ```
-http://localhost:2009
+http://localhost:20009
 ```
 
 **Note**: The maptiles in the example projects take quite a long time
